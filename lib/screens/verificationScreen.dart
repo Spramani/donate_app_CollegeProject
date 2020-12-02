@@ -204,6 +204,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                               Navigator.of(context)
                                   .pushNamed(ProfileScreen.routeName);
                             },
+                            splashColor: Colors.transparent,
                             elevation: 01,
                             color: Theme.of(context).buttonColor,
                             shape: RoundedRectangleBorder(

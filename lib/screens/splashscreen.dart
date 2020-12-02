@@ -14,15 +14,21 @@ class SplashScreen extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
+              // List: [
               Theme.of(context).accentColor,
               Theme.of(context).primaryColor
             ],
+
+            // [
+            //   Theme.of(context).accentColor,
+            //   Theme.of(context).primaryColor
+            // ],
           ),
         ),
         child: Center(
           child: Image.asset(
             'assets/images/logobig.png',
-            width: _size.width / 2,
+            width: _size.width / 4,
           ),
         ),
       ),

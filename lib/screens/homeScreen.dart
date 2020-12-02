@@ -4,6 +4,8 @@ import 'package:donate_app/screens/bedonor.dart';
 import 'package:donate_app/screens/needplasma.dart';
 import 'package:flutter/material.dart';
 
+import 'sidebar.dart';
+
 class HomeScreen extends StatefulWidget {
   static const routeName = '/Home-screen';
   @override
@@ -15,14 +17,15 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isPressed1 = false;
   bool isPressed2 = false;
 
-  final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     _size = MediaQuery.of(context).size;
     return Scaffold(
-      key: scaffoldKey,
       backgroundColor: Theme.of(context).splashColor,
+      key: _scaffoldKey,
+      drawer: MyDrawer(),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBar(
@@ -30,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0,
           leading: IconButton(
             onPressed: () {
-              scaffoldKey.currentState.openDrawer();
+              _scaffoldKey.currentState.openDrawer();
             },
             icon: Image.asset(
               'assets/images/menu.png',
@@ -56,6 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 15,
+                  ),
                   Container(
                     child: Image.asset(
                       'assets/images/donation.jpg',
@@ -219,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'User name',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -228,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'Blood group : A+',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -237,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'Other detail',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ],
@@ -273,7 +279,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'User name',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -282,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'Blood group : A+',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -291,7 +297,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'Other detail',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ],
@@ -327,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'User name',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -336,7 +342,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'Blood group : A+',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
@@ -345,7 +351,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     'Other detail',
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ],
@@ -538,7 +544,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: _size.width / 3,
+                      width: (_size.width - 50) / 2,
                       height: 38,
                       child: RaisedButton(
                         onPressed: () {
@@ -550,7 +556,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Text(
-                          'Be a donor',
+                          'Be a Donor',
                           style: TextStyle(
                             color: isPressed1 ? Colors.black : Colors.white,
                             fontSize: 16,
@@ -560,10 +566,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     SizedBox(
-                      width: 12,
+                      width: 15,
                     ),
                     Container(
-                      width: _size.width / 3,
+                      width: (_size.width - 50) / 2,
                       height: 38,
                       child: RaisedButton(
                         onPressed: () {
@@ -575,7 +581,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Text(
-                          'Need plasma',
+                          'Need Plasma',
                           style: TextStyle(
                             color: isPressed2 ? Colors.black : Colors.white,
                             fontSize: 16,

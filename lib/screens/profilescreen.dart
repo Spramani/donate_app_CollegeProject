@@ -26,6 +26,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
   bool isPressed1 = false;
   bool isPressed2 = false;
   bool isPressed3 = false;
@@ -113,260 +114,260 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     right: 28,
                   ),
                   child: Container(
+                    
+                          clipBehavior: Clip.none,
                     width: _size.width,
-                    height: _size.height,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Column(
+                    child: Column(                      
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
+                          clipBehavior: Clip.none,
                           transform: Matrix4.translationValues(0, -25, 0),
                           child: Image.asset(
                             'assets/images/verrysmalllogo.png',
                             width: _size.width / 4.5,
                           ),
                         ),
-                        SingleChildScrollView(
-                          child: Form(
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 23,
-                              ),
-                              child: Column(
-                                children: [
-                                  TextFormField(
-                                    decoration: InputDecoration(
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide.none,
-                                      ),
-                                      fillColor: Colors.grey[200],
-                                      filled: true,
-                                      hintText: 'Full name',
-                                      hintStyle: TextStyle(
-                                        color: Theme.of(context).hintColor,
-                                      ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                        vertical: 14,
-                                        horizontal: 28,
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide(
-                                          color: Theme.of(context).accentColor,
-                                          width: 1,
-                                          style: BorderStyle.solid,
-                                        ),
+                        Form(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 23,
+                            ),
+                            child: Column(
+                              children: [
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide.none,
+                                    ),
+                                    fillColor: Colors.grey[200],
+                                    filled: true,
+                                    hintText: 'Full name',
+                                    hintStyle: TextStyle(
+                                      color: Theme.of(context).hintColor,
+                                    ),
+                                    contentPadding: EdgeInsets.symmetric(
+                                      vertical: 14,
+                                      horizontal: 28,
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(
+                                        color: Theme.of(context).accentColor,
+                                        width: 1,
+                                        style: BorderStyle.solid,
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 13,
-                                  ),
-                                  TextFormField(
-                                    keyboardType: TextInputType.multiline,
-                                    decoration: InputDecoration(
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide.none,
-                                      ),
-                                      fillColor: Colors.grey[200],
-                                      filled: true,
-                                      hintText: 'Address',
-                                      hintStyle: TextStyle(
-                                        color: Theme.of(context).hintColor,
-                                      ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                        vertical: 14,
-                                        horizontal: 28,
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide(
-                                          color: Theme.of(context).accentColor,
-                                          width: 1,
-                                          style: BorderStyle.solid,
-                                        ),
+                                ),
+                                SizedBox(
+                                  height: 13,
+                                ),
+                                TextFormField(
+                                  keyboardType: TextInputType.multiline,
+                                  decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide.none,
+                                    ),
+                                    fillColor: Colors.grey[200],
+                                    filled: true,
+                                    hintText: 'Address',
+                                    hintStyle: TextStyle(
+                                      color: Theme.of(context).hintColor,
+                                    ),
+                                    contentPadding: EdgeInsets.symmetric(
+                                      vertical: 14,
+                                      horizontal: 28,
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(
+                                        color: Theme.of(context).accentColor,
+                                        width: 1,
+                                        style: BorderStyle.solid,
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 13,
-                                  ),
-                                  TextFormField(
-                                    decoration: InputDecoration(
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide.none,
-                                      ),
-                                      fillColor: Colors.grey[200],
-                                      filled: true,
-                                      hintText: 'Email',
-                                      hintStyle: TextStyle(
-                                        color: Theme.of(context).hintColor,
-                                      ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                        vertical: 14,
-                                        horizontal: 28,
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide(
-                                          color: Theme.of(context).accentColor,
-                                          width: 1,
-                                          style: BorderStyle.solid,
-                                        ),
+                                ),
+                                SizedBox(
+                                  height: 13,
+                                ),
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide.none,
+                                    ),
+                                    fillColor: Colors.grey[200],
+                                    filled: true,
+                                    hintText: 'Email',
+                                    hintStyle: TextStyle(
+                                      color: Theme.of(context).hintColor,
+                                    ),
+                                    contentPadding: EdgeInsets.symmetric(
+                                      vertical: 14,
+                                      horizontal: 28,
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(
+                                        color: Theme.of(context).accentColor,
+                                        width: 1,
+                                        style: BorderStyle.solid,
                                       ),
                                     ),
                                   ),
+                                ),
 
-                                  SizedBox(
-                                    height: 13,
+                                SizedBox(
+                                  height: 13,
+                                ),
+                                Container(
+                                  width: _size.width,
+                                  padding: EdgeInsets.only(
+                                    left: 28,
+                                    right: 20,
                                   ),
-                                  Container(
-                                    width: _size.width,
-                                    padding: EdgeInsets.only(
-                                      left: 28,
-                                      right: 20,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Colors.grey[200],
-                                    ),
-                                    child: DropdownButton(
-                                      underline: Container(
-                                        color: Colors.transparent,
-                                      ),
-                                      isExpanded: true,
-                                      isDense: false,
-                                      elevation: 0,
-                                      hint: Text('Gender'),
-                                      value: selectedGender,
-                                      onChanged: (Gender value) {
-                                        setState(() {
-                                          selectedGender = value;
-                                        });
-                                      },
-                                      items: genders.map((Gender gender) {
-                                        return DropdownMenuItem(
-                                          value: gender,
-                                          child: Row(
-                                            children: [
-                                              gender.iamge,
-                                              SizedBox(
-                                                width: 20,
-                                              ),
-                                              Text(
-                                                gender.name,
-                                              )
-                                            ],
-                                          ),
-                                        );
-                                      }).toList(),
-                                    ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey[200],
                                   ),
-                                  SizedBox(
-                                    height: 13,
-                                  ),
-                                  TextFormField(
-                                    decoration: InputDecoration(
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide.none,
-                                      ),
-                                      fillColor: Colors.grey[200],
-                                      filled: true,
-                                      hintText: 'Date of birth',
-                                      hintStyle: TextStyle(
-                                        color: Theme.of(context).hintColor,
-                                      ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                        vertical: 14,
-                                        horizontal: 28,
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide(
-                                          color: Theme.of(context).accentColor,
-                                          width: 1,
-                                          style: BorderStyle.solid,
+                                  child: DropdownButton(
+                                    underline: Container(
+                                      color: Colors.transparent,
+                                    ),
+                                    isExpanded: true,
+                                    isDense: false,
+                                    elevation: 0,
+                                    hint: Text('Gender'),
+                                    value: selectedGender,
+                                    onChanged: (Gender value) {
+                                      setState(() {
+                                        selectedGender = value;
+                                      });
+                                    },
+                                    items: genders.map((Gender gender) {
+                                      return DropdownMenuItem(
+                                        value: gender,
+                                        child: Row(
+                                          children: [
+                                            gender.iamge,
+                                            SizedBox(
+                                              width: 20,
+                                            ),
+                                            Text(
+                                              gender.name,
+                                            )
+                                          ],
                                         ),
-                                      ),
-                                    ),
+                                      );
+                                    }).toList(),
                                   ),
-                                  // SizedBox(
-                                  //   height: 13,
-                                  // ),
-                                  // TextFormField(
-                                  //   decoration: InputDecoration(
-                                  //     enabledBorder: OutlineInputBorder(
-                                  //       borderRadius: BorderRadius.circular(10),
-                                  //       borderSide: BorderSide.none,
-                                  //     ),
-                                  //     fillColor: Colors.grey[200],
-                                  //     filled: true,
-                                  //     hintText: 'Blood group',
-                                  //     hintStyle: TextStyle(
-                                  //       color: Theme.of(context).hintColor,
-                                  //     ),
-                                  //     contentPadding: EdgeInsets.symmetric(
-                                  //       vertical: 14,
-                                  //       horizontal: 28,
-                                  //     ),
-                                  //     focusedBorder: OutlineInputBorder(
-                                  //       borderRadius: BorderRadius.circular(10),
-                                  //       borderSide: BorderSide(
-                                  //         color: Theme.of(context).accentColor,
-                                  //         width: 1,
-                                  //         style: BorderStyle.solid,
-                                  //       ),
-                                  //     ),
-                                  //   ),
-                                  // ),
-                                  SizedBox(
-                                    height: 13,
-                                  ),
-                                  Container(
-                                    width: _size.width,
-                                    padding: EdgeInsets.only(
-                                      left: 28,
-                                      right: 20,
-                                    ),
-                                    decoration: BoxDecoration(
+                                ),
+                                SizedBox(
+                                  height: 13,
+                                ),
+                                TextFormField(
+                                  decoration: InputDecoration(
+                                    enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: Colors.grey[200],
+                                      borderSide: BorderSide.none,
                                     ),
-                                    child: DropdownButton(
-                                      underline: Container(
-                                        color: Colors.transparent,
+                                    fillColor: Colors.grey[200],
+                                    filled: true,
+                                    hintText: 'Date of birth',
+                                    hintStyle: TextStyle(
+                                      color: Theme.of(context).hintColor,
+                                    ),
+                                    contentPadding: EdgeInsets.symmetric(
+                                      vertical: 14,
+                                      horizontal: 28,
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(
+                                        color: Theme.of(context).accentColor,
+                                        width: 1,
+                                        style: BorderStyle.solid,
                                       ),
-                                      isExpanded: true,
-                                      isDense: false,
-                                      elevation: 0,
-                                      hint: Text('Blood Group'),
-                                      value: selectedGroup,
-                                      onChanged: (BloodGroup value) {
-                                        setState(() {
-                                          selectedGroup = value;
-                                        });
-                                      },
-                                      items: bloodGroups
-                                          .map((BloodGroup bloodGroups) {
-                                        return DropdownMenuItem(
-                                          value: bloodGroups,
-                                          child: Text(
-                                            bloodGroups.name,
-                                          ),
-                                        );
-                                      }).toList(),
                                     ),
                                   ),
-                                  //FormField(builder: )
-                                ],
-                              ),
+                                ),
+                                // SizedBox(
+                                //   height: 13,
+                                // ),
+                                // TextFormField(
+                                //   decoration: InputDecoration(
+                                //     enabledBorder: OutlineInputBorder(
+                                //       borderRadius: BorderRadius.circular(10),
+                                //       borderSide: BorderSide.none,
+                                //     ),
+                                //     fillColor: Colors.grey[200],
+                                //     filled: true,
+                                //     hintText: 'Blood group',
+                                //     hintStyle: TextStyle(
+                                //       color: Theme.of(context).hintColor,
+                                //     ),
+                                //     contentPadding: EdgeInsets.symmetric(
+                                //       vertical: 14,
+                                //       horizontal: 28,
+                                //     ),
+                                //     focusedBorder: OutlineInputBorder(
+                                //       borderRadius: BorderRadius.circular(10),
+                                //       borderSide: BorderSide(
+                                //         color: Theme.of(context).accentColor,
+                                //         width: 1,
+                                //         style: BorderStyle.solid,
+                                //       ),
+                                //     ),
+                                //   ),
+                                // ),
+                                SizedBox(
+                                  height: 13,
+                                ),
+                                Container(
+                                  width: _size.width,
+                                  padding: EdgeInsets.only(
+                                    left: 28,
+                                    right: 20,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey[200],
+                                  ),
+                                  child: DropdownButton(
+                                    underline: Container(
+                                      color: Colors.transparent,
+                                    ),
+                                    isExpanded: true,
+                                    isDense: false,
+                                    elevation: 0,
+                                    hint: Text('Blood Group'),
+                                    value: selectedGroup,
+                                    onChanged: (BloodGroup value) {
+                                      setState(() {
+                                        selectedGroup = value;
+                                      });
+                                    },
+                                    items: bloodGroups
+                                        .map((BloodGroup bloodGroups) {
+                                      return DropdownMenuItem(
+                                        value: bloodGroups,
+                                        child: Text(
+                                          bloodGroups.name,
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                                //FormField(builder: )
+                              ],
                             ),
                           ),
                         ),
@@ -401,6 +402,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: RaisedButton(
                                   onPressed: () {
                                     setState(() {
+                                      isPressed2 = false;
                                       isPressed1 = !isPressed1;
                                     });
                                   },
@@ -432,6 +434,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: RaisedButton(
                                   onPressed: () {
                                     setState(() {
+                                      isPressed1 = false;
                                       isPressed2 = !isPressed2;
                                     });
                                   },
@@ -488,6 +491,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: RaisedButton(
                                   onPressed: () {
                                     setState(() {
+                                       isPressed4 = false;
                                       isPressed3 = !isPressed3;
                                     });
                                   },
@@ -499,7 +503,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Text(
-                                    'Home quarantine',
+                                    'Quarantine',
                                     style: TextStyle(
                                       color: isPressed3
                                           ? Colors.white
@@ -519,6 +523,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: RaisedButton(
                                   onPressed: () {
                                     setState(() {
+                                      isPressed3 = false;
                                       isPressed4 = !isPressed4;
                                     });
                                   },
@@ -536,7 +541,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           ? Colors.white
                                           : Colors.black,
                                       fontSize: 15,
-                                      fontWeight: FontWeight.w100,
+                                      fontWeight: FontWeight.w400,
                                     ),
                                   ),
                                 ),
@@ -544,13 +549,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ],
                           ),
                         ),
-                        Spacer(),
-                        Spacer(),
+                       
                         SizedBox(
                           height: 50,
                         ),
                         Container(
-                          width: _size.width / 3,
+                          width: _size.width / 2,
                           height: 38,
                           child: RaisedButton(
                             onPressed: () {
@@ -571,6 +575,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                           ),
+                        ),
+                      SizedBox(
+                          height: 50,
                         ),
                       ],
                     ),
