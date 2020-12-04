@@ -90,8 +90,8 @@ class _BeADonorState extends State<BeADonor> {
           child: Column(
             children: [
               Container(
-                width: _size.width,
-                height: _size.height * 0.15,
+                // width: _size.width,
+                // height: _size.height * 0.15,
                 padding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 15,
@@ -209,8 +209,6 @@ class _BeADonorState extends State<BeADonor> {
                 height: 15,
               ),
               Container(
-                width: _size.width,
-                height: _size.height * 0.16,
                 padding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 15,
@@ -299,10 +297,8 @@ class _BeADonorState extends State<BeADonor> {
                 height: 15,
               ),
               Container(
-                width: _size.width,
-                height: _size.height * 0.16,
                 padding: EdgeInsets.symmetric(
-                  horizontal: 20,
+                  horizontal: 15,
                   vertical: 15,
                 ),
                 decoration: BoxDecoration(

@@ -10,8 +10,11 @@ class NeedPlasma extends StatefulWidget {
 
 class _NeedPlasmaState extends State<NeedPlasma> {
   Size _size;
+
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   String valued;
+  TextEditingController textEditingControllers = new TextEditingController();
+  String getvalue = "";
 
   bool isPressed1 = false;
   bool isPressed2 = false;
@@ -66,8 +69,8 @@ class _NeedPlasmaState extends State<NeedPlasma> {
         child: Column(
           children: [
             Container(
-              width: _size.width,
-              height: _size.height * 0.15,
+              // width: _size.width,
+              // height: _size.height * 0.15,
               padding: EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: 15,
@@ -183,8 +186,8 @@ class _NeedPlasmaState extends State<NeedPlasma> {
               height: 15,
             ),
             Container(
-              width: _size.width,
-              height: _size.height * 0.16,
+              // width: _size.width,
+              // height: _size.height * 0.16,
               padding: EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: 15,
@@ -197,7 +200,7 @@ class _NeedPlasmaState extends State<NeedPlasma> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'What is reason for need?',
+                    'What is reason for need?$getvalue',
                     style: TextStyle(
                       fontSize: 19,
                     ),
@@ -228,7 +231,8 @@ class _NeedPlasmaState extends State<NeedPlasma> {
                         ),
                         child: Center(
                           child: TextFormField(
-                            keyboardType: TextInputType.multiline,
+                            controller: textEditingControllers,
+                            keyboardType: TextInputType.text,
                             decoration: InputDecoration(
                               border: InputBorder.none,
                             ),
@@ -244,6 +248,7 @@ class _NeedPlasmaState extends State<NeedPlasma> {
                         height: 35,
                         child: RaisedButton(
                           onPressed: () {
+                            getvalue = textEditingControllers.text;
                             showDialog(
                               context: context,
                               builder: (BuildContext context) =>
@@ -285,8 +290,12 @@ Widget popupItem(BuildContext context) {
       borderRadius: BorderRadius.circular(8),
     ),
     content: Container(
-      width: _size.width,
-      height: _size.height * 0.3,
+      width: 50,
+      height: 300,
+      padding: EdgeInsets.only(
+        left: 28,
+        right: 20,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

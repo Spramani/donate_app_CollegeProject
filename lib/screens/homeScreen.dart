@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // HomeScreen(this.title);
   Size _size;
   bool isPressed1 = false;
   bool isPressed2 = false;
